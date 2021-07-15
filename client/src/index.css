@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'nunito';
+  /* background: url(img/pantalla.png) no-repeat center center fixed;  */
+  /* background-color: black; */
+
+  --color:yellow;
+
+  --color2: yellow;
+
+  --color3: yellow;
+}
+
+input, button, select{
+  font-family: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
