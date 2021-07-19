@@ -1,6 +1,7 @@
 import axios from 'axios';
 export const GET_BREEDS = 'GET_BREEDS';
 export const GET_BREED_DETAIL = 'GET_BREED_DETAIL';
+export const GET_TEMPERAMENT = 'GET_TEMPERAMENT';
 export const CREATE_BREED = 'CREATE_BREED';
 export const SET_FILTERED = 'SET_FILTERED';
 export const SET_LOADING = 'SET_LOADING';
@@ -10,7 +11,8 @@ export const SET_BREEDS = 'SET_BREEDS';
 
 export function getBreeds() {
 	return function (dispatch) {
-		return axios.get('http://localhost:3001/dogs').then((breeds) => {
+		return axios.get('http://localhost:3001/dogs')
+		.then((breeds) => {
 			dispatch({
 				type: 'GET_BREEDS',
 				payload: breeds.data,
@@ -31,8 +33,20 @@ export function getBreedDetail(id) {
   };
 }
 
-export function setFiltered(payload) {
-  return { type: SET_FILTERED, payload };
+export function getTemperaments() {
+	return function (dispatch) {
+		return axios.get('http://localhost:3001/temperament')
+		.then((temperament) => {
+			dispatch({
+				type: 'GET_TEMPERAMENT',
+				payload: temperament.data,
+			});
+		});
+	};
+}
+
+export function setFiltered(arr) {
+  return { type: SET_FILTERED, payload:arr };
 };
 
 export function setLoading(payload) {
@@ -49,4 +63,5 @@ export function setBreeds(payload) {
   return {
     type: SET_BREEDS, payload
   }
+  
 }

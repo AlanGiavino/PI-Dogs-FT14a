@@ -5,6 +5,7 @@ export const StyledHome = styled.div`
 
     .loading{
         margin-top: 40px;
+        color:yellow;
             i{
                 font-size: 40px;
 
@@ -17,7 +18,6 @@ export const StyledHome = styled.div`
         font-weight: bold;
         i{
             margin-right: 5px;
-            /* color: black; */
             display: block;
         }
     }
@@ -39,11 +39,10 @@ export const StyledHome = styled.div`
     }    
 
     .cards-container{
-        display: flex;
+        display: grid;
         justify-content: center;
-        flex-wrap: wrap;
-        /* padding: 40px; */
-        /* margin-top: 80px; */
+        grid-auto-rows: 300px;;
+        
     }
 
     .paginationButtons{
@@ -64,6 +63,7 @@ export const StyledHome = styled.div`
             border: 1px solid black;
             color: black;
             cursor: pointer;
+            background-color: yellow;
         }
 
         & a:hover{
@@ -86,6 +86,7 @@ export const StyledHome = styled.div`
         padding: 20px;
         border: 2px solid var(--color);
         margin: 20px auto;
+        color: yellow;
 
         h1{
             margin-top: 10px;

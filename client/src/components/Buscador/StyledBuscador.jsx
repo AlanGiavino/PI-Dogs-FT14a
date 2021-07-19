@@ -5,6 +5,7 @@ export const StyledBuscador = styled.div`
     margin: auto;
     max-width: 400px;
     width: 90%;
+    color: yellow;
     input{
         font-size: 20px;
         padding: 10px 55px 10px 20px;
@@ -12,6 +13,7 @@ export const StyledBuscador = styled.div`
         outline: 0;
         border: 2px solid yellow;
         width: 100%;
+        color:black;
 
     }
     
@@ -23,7 +25,7 @@ export const StyledBuscador = styled.div`
         top: 50%;
         transform: translateY(-50%);
         font-size: 25px;
-        color: var(--color);
+        color: yellow;
     }
     
         

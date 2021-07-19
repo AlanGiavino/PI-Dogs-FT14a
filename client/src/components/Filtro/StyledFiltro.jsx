@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const StyledFiltro = styled.div`
 
     margin-top: 20px;
-    /* background-color: var(--color); */
-    background-color: white;
+    color: yellow;
+    background-color: black;
     border: 2px solid var(--color);
     border-radius: 5px;
     padding: 20px;
-    /* position: fixed; */
-    /* top: 400px; */
+    
     .filter-container{
         display: flex;
         flex-direction: column;
@@ -20,16 +19,17 @@ export const StyledFiltro = styled.div`
 
         .filter-button{
             color: var(--color);
-            background-color: #333;
-            border: none;
+            background-color: black;
+            border: 2px solid yellow;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 200ms ease;
             margin-top: 20px;
             font-size: 15px;
             &:hover{
+               color: black;
                  font-weight: bold;
-                 background-color: black;
+                 background-color: yellow;
                 }
             &:active{
                 transform: scale(0.95);

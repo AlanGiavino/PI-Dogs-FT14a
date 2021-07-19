@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledOrdenador = styled.form`
-    background-color: white;
+    background-color: black;
     border-radius: 5px;
     padding: 20px;
     border: 2px solid var(--color);
+    color: yellow;
     
     div{
         display: flex;
@@ -22,17 +23,18 @@ export const StyledOrdenador = styled.form`
         }
 
         button{
-            color: var(--color);
-            background-color: #333;
-            border: none;
+            color: yellow;
+            background-color: black;
+            border: 2px solid yellow;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 200ms ease;
             margin-top: 20px;
             font-size: 15px;
             &:hover{
-                font-weight: bold;
-                background-color: black;
+                color: black;
+                 font-weight: bold;
+                 background-color: yellow;
             }
             &:active{
                 transform: scale(0.95);

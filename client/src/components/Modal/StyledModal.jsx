@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from "framer-motion";
 
 export const StyledModal = styled(motion.div)`
-    background-color: #c0ddc6;
+    background-color: red;
     max-width: 800px;
     min-height: 500px;
     border-radius: 20px;

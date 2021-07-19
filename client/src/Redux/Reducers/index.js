@@ -1,12 +1,13 @@
 
-import { GET_BREEDS, GET_BREED_DETAIL, SET_FILTERED, SET_LOADING, ORDER_ASC, ORDER_DESC, SET_BREEDS } from '../Actions/index';
+import { GET_BREEDS, GET_BREED_DETAIL, GET_TEMPERAMENT, SET_FILTERED, SET_LOADING, ORDER_ASC, ORDER_DESC, SET_BREEDS } from '../Actions/index';
 
 
 const initialState = {
   loading: false,
   filteredBreeds: [],
   breedsLoaded: [],
-  breedDetail: {}
+  breedDetail: {},
+  temperaments: [],
 
 };
 
@@ -25,6 +26,13 @@ function rootReducer(state = initialState, action) {
     }
   }
 
+  if (action.type === GET_TEMPERAMENT) {
+    return {
+      ...state,
+      temperaments: action.payload
+    }
+  }
+  
   if (action.type === SET_FILTERED) {
     return {
       ...state,

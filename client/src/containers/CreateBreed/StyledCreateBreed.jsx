@@ -6,20 +6,20 @@ export const StyledCreateBreed = styled(motion.div)`
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
-    min-height: 650px;
+    max-width: 600px;
+    min-height: 400px;
     width: 90%;
     border-radius: 20px;
-    /* overflow: hidden; */
-    /* border: 1px solid rgba(0, 0, 0, 0.5); */
-    border: 2px solid var(--color);
+    background-color:black;
+    border: 2px solid yellow;
+    color:yellow;
 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 
     .form{
-        width: 50%;
-        margin-right: 10px;
-
+        width: 100%;
+        margin: 10px auto 30px;
+        
         .form-top{
             display: flex;
             justify-content: center;
@@ -32,7 +32,7 @@ export const StyledCreateBreed = styled(motion.div)`
                 margin-bottom: 20px; 
                 padding: 8px 10px;
                 border-radius: 10px;
-                border: 1px solid black;
+                border: 2px solid yellow;
                 outline: none;
                 width: 70%;
                 }
@@ -43,13 +43,13 @@ export const StyledCreateBreed = styled(motion.div)`
                 outline: none;
                 font-size: 15px;
                 margin-bottom: 20px;
-                border: 1px solid black;
+                border: 2px solid yellow;
                 width: 70%;
             }
 
             .submit{
-                color: var(--color);
-                background-color: #333;
+                color: black;
+                background-color: yellow;
                 border: none;
                 padding: 10px 15px;
                 border-radius: 5px;
@@ -60,6 +60,8 @@ export const StyledCreateBreed = styled(motion.div)`
                 &:hover{
                     font-weight: bold;
                     background-color: black;
+                    color:yellow;
+                    border: 1px solid yellow;
                 }
             }
             .submit:active{
@@ -107,7 +109,7 @@ export const StyledCreateBreed = styled(motion.div)`
     margin: 200px auto 30px;
 }
 
-@media (max-width: 650px){
+@media (max-width: 200px){
     flex-direction: center;
 
     .form{
@@ -124,5 +126,5 @@ export const StyledCreateBreed = styled(motion.div)`
     }
 }
 
-    
+
 `

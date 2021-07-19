@@ -10,7 +10,7 @@ export const StyledLanding = styled.div`
 
     .container{
         position: absolute;
-        top: 70%;
+        top: 45%;
         left: 500px;
         padding: 0 30px;
         transform: translateY(-50%);
@@ -40,10 +40,5 @@ export const StyledLanding = styled.div`
         line-height: 1.2;
     }
 
-    @media (max-width: 1200px){
-        .container{
-            left: 0;
-            }
-    }
-
+   
 `
