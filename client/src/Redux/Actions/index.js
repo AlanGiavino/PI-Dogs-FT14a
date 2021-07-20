@@ -2,7 +2,6 @@ import axios from 'axios';
 export const GET_BREEDS = 'GET_BREEDS';
 export const GET_BREED_DETAIL = 'GET_BREED_DETAIL';
 export const GET_TEMPERAMENT = 'GET_TEMPERAMENT';
-export const CREATE_BREED = 'CREATE_BREED';
 export const SET_FILTERED = 'SET_FILTERED';
 export const SET_LOADING = 'SET_LOADING';
 export const ORDER_ASC = 'ORDER_ASC';

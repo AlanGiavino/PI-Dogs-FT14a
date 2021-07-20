@@ -1,12 +1,12 @@
+  
 import React, { useEffect, useState } from 'react';
 import { StyledCreateBreed } from './StyledCreateBreed';
 import { useDispatch } from "react-redux";
 import { getBreeds } from '../../Redux/Actions/index';
+import axios from '../../axios';
 import CreateBreedModal from './CreateBreedModal';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
-import axios from 'axios';
-import { connect } from 'react-redux';
 
 const variants = {
     hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ function CreateBreed() {
     const dispatch = useDispatch();
 
     const [temps, setTemps] = useState([]); // temps = [{id:1, name: 'Alert'},{},{}]
-    // const [selectedTemp, setSelectedTemp] = useState('');
+    const [selectedTemp, setSelectedTemp] = useState('');
     const [input, setInput] = useState({
 
         temperaments: [],
@@ -26,29 +26,30 @@ function CreateBreed() {
         weight: '',
         height: '',
         life_span: '',
-        image: 'https://www.pexels.com/es-es/foto/pit-bull-terrier-americano-marron-y-blanco-con-disfraz-marron-825949/'
+        image: 'https://images.pexels.com/photos/825949/pexels-photo-825949.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
     });
     const [showModal, setShowModal] = useState({ created: false, temp: false });
 
+
     useEffect(() => {
-        async function getTemperaments() {
-            let t = (await axios.get('http://localhost:3001/temperament')).data;
+        async function getTemps() {
+            let t = (await axios.get('/temperament')).data;
             setTemps(t);
         }
-        getTemperaments();
+        getTemps();
     }, [])
 
-    const handleChange = (e) => {
+    const handleChange = (ev) => {
 
         setInput({
             ...input,
-            [e.target.name]: e.target.value,
+            [ev.target.name]: ev.target.value,
         });
     };
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
 
-        axios.post('http://localhost:3001/dogs', input).then((res) => {
+        axios.post("/dog", input).then((res) => {
             if (res.status === 200) {
                 setShowModal({
                     ...showModal,
@@ -72,23 +73,23 @@ function CreateBreed() {
             })
     };
 
-    const handleChangeTemp = (e) => {
+    const handleChangeTemp = (ev) => {
 
-        // setSelectedTemp(
-        //     e.target.value
-        // );
+        setSelectedTemp(
+            ev.target.value
+        );
 
-        // if (e.target.value) {
+        if (ev.target.value) {
 
-        //     if (!input.temperaments.includes(e.target.value)) {
+            if (!input.temperaments.includes(ev.target.value)) {
                 setInput({
                     ...input,
-                    temperaments: [...input.temperaments, e.target.value]
+                    temperaments: [...input.temperaments, ev.target.value]
                 })
             }
-        // }
+        }
 
-    // };
+    };
 
     function getNames(arr) {
         let names = [];
@@ -159,10 +160,10 @@ function CreateBreed() {
                         min="1"
                     />
 
-                    <select onChange={(e) => handleChangeTemp(e)} name="temperaments" value={input.temperament}  >
+                    <select onChange={handleChangeTemp} name="temperaments" value={selectedTemp}  >
                         <option value=''>Select temperaments</option>
                         {
-                            temps?.map((t) => (
+                            temps.map((t) => (
                                 <option value={t.id} key={t.id}>{t.name}</option>
                             ))
                         }
@@ -189,24 +190,10 @@ function CreateBreed() {
 
                 </form>
             </div>
+            <div className='img-container' />
         </StyledCreateBreed>
     )
 
-    
-     
-
 }
 
-// function mapStateToProps(state) {
-//     return {
-//         temperaments: state.temperaments
-//     }
-//     }
-
-// function mapDispatchToProps(dispatch){
-//         return{
-//             temperaments: breed => dispatch (temperaments(breed))
-//         }
-//     }
-// export default connect ( mapStateToProps , mapDispatchToProps)(CreateBreed);
 export default CreateBreed;

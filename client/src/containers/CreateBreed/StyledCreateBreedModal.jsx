@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { motion } from "framer-motion";
 
 export const StyledCreateBreedModal = styled(motion.div)`
-    background-color: white;
+    background-color: yellow;
     border-radius: 10px;
     border: 2px solid black;
     padding: 20px;
     max-width: 400px;
     width: 90%;
+    color: black;
 
     .overlay{
         h1{
@@ -19,9 +20,9 @@ export const StyledCreateBreedModal = styled(motion.div)`
         }
 
         button{
-            color: var(--color);
-            background-color: #333;
-            border: none;
+            color: black;
+            background-color: yellow;
+            border: 2px solid black;
             padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 300ms ease, font-weight 300ms ease;;
@@ -31,6 +32,7 @@ export const StyledCreateBreedModal = styled(motion.div)`
             &:hover{
                 font-weight: bold;
                 background-color: black;
+                color: yellow;
             }
             &:active{
                 transform: scale(0.95);
@@ -38,7 +40,7 @@ export const StyledCreateBreedModal = styled(motion.div)`
         }
 
         span{
-            border: 3px solid black;
+            border: 2px solid black;
             border-radius: 100px;
             padding: 0 10px;
             font-size: 20px;
