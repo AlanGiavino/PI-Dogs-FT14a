@@ -15,15 +15,9 @@ border-bottom: 2px solid yellow;
     align-items: center;
     justify-content: space-between;
     color: black;
-    padding: 10px;            
+    padding: 10px;           
         }
     }
-}
-
-.title{
-    font-weight: bold;
-    font-size: 20px;
-    color:yellow;
 }
 
 img{
@@ -32,8 +26,8 @@ img{
     justify-content: center;  
     text-align: center;
     margin-right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
 }

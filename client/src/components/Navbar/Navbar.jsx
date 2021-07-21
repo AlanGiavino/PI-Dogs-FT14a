@@ -8,7 +8,6 @@ export default function Navbar() {
         <StyledNav>
             <div className='container'>
                 <ul className='logo'> <img src={Logo} /></ul>
-                <ul className='title'>PI-Dogs</ul>
                     <ul className="list">
                         <li className="list-item">
                             <NavLink exact to="/home" >Home</NavLink>

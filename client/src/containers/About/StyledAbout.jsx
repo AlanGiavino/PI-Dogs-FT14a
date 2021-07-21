@@ -8,29 +8,28 @@ export const StyledAbout = styled(motion.div)`
     width: 90%;
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
-    border: 2px solid yellow;
-    background-color: black;
-    color:yellow;
+    background-color: yellow;
+    color: black;
 
     .about{
         h1{
             margin-bottom: 10px;
-            color: yellow;
+            color: black;
         }
         a{
-            color: yellow;
+            color: black;
             font-weight: bold;
         }
 
         p:last-child{
             margin-top: 10px;
-            color:yellow;
+            color:black;
         }
     }
 
     .tech-title{
         margin-top: 20px;   
-        color:yellow;
+        color:black;
     }
 
     .tech-container{
