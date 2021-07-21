@@ -56,7 +56,6 @@ function Filtro({ setShowNoResult, arrayTemps, setArrayTemps, handleClick }) {
         setShowNoResult(false);
 
         if (arrayTemps.length === 0) {
-            // filtered = breeds;
             dispatch(setFiltered([]));
             return
         }

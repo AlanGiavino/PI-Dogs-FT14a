@@ -11,9 +11,7 @@ function Buscador({ setTitle, title }) {
     }
     async function handleSubmit(event) {
         event.preventDefault();
-        // setLoading(true);
-        // await getBreeds(title);
-        // setLoading(false);
+        
 
     }
 

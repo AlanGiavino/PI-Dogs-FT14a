@@ -60,14 +60,15 @@ export const StyledHome = styled.div`
             padding: 10px;
             margin: 10px 8px;
             border-radius: 10px;
-            border: 1px solid black;
-            color: black;
             cursor: pointer;
-            background-color: yellow;
+            background-color: black;
+            border: 2px solid yellow;
+            color: yellow;
         }
 
         & a:hover{
             background-color: yellow;
+            color: black;
         }
 
     }
@@ -75,6 +76,7 @@ export const StyledHome = styled.div`
     .paginationActive{
         a{
         background-color: yellow;
+        color: black;
         }
     }
 
@@ -101,9 +103,9 @@ export const StyledHome = styled.div`
         }
 
         button{
-            color: var(--color);
-            background-color: #333;
-            border: none;
+            color: yellow;
+            background-color: black;
+            border: 2px solid yellow;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 200ms ease;
@@ -111,7 +113,8 @@ export const StyledHome = styled.div`
             font-size: 15px;
             &:hover{
                  font-weight: bold;
-                 background-color: black;
+                 background-color: yellow;
+                 color: black;
                 }
             &:active{
                 transform: scale(0.95);

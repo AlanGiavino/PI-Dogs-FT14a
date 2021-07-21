@@ -1,21 +1,27 @@
-const { Breed, conn } = require('../../src/db.js');
+const { Breed } = require("../../src/db")
+const { expect } = require('chai');
 
-describe('Breed model', () => {
-  before(() => conn.authenticate()
-    .catch((err) => {
-      console.error('Unable to connect to the database:', err);
-    }));
-  describe('Validators', () => {
-    beforeEach(() => Breed.sync({ force: true }));
-    describe('name', () => {
-      it('should throw an error if name is null', (done) => {
-        Breed.create({})
-          .then(() => done(new Error('It requires a valid name')))
+describe('Model Testing', function() {
+ 
+  describe('Dog model', function () {
+    beforeEach(async function() {
+      await Breed.sync({ force: true });
+    });
+    describe('Validations', function () {
+      it('No deberia crearse sin los datos completos', function(done) {
+         Breed.create({
+          name: 'Rofo',
+         })
+          .then(() => done('No debería haberse creado'))
           .catch(() => done());
       });
-      it('should work when its a valid name', () => {
-        Breed.create({ name: 'Pug' });
+      it('No deberia crearse sin los datos completos', function(done) {
+        Breed.create({
+          height: 'ARG',
+        })
+        .then(() => done('No deberia haberse creado'))
+        .catch(() => done());
       });
     });
-  });
-});
+  })
+})
