@@ -25,8 +25,7 @@ img{
     align-items: center;
     justify-content: center;  
     text-align: center;
-    margin-right: 20px;
-    width: 80px;
+    width: 200px;
     height: 80px;
   }
 
