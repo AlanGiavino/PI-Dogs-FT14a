@@ -10,7 +10,7 @@ export const SET_BREEDS = 'SET_BREEDS';
 
 export function getBreeds() {
 	return function (dispatch) {
-		return axios.get('http://localhost:3001/dogs')
+		return axios.get('/dogs')
 		.then((breeds) => {
 			dispatch({
 				type: 'GET_BREEDS',
@@ -34,7 +34,7 @@ export function getBreedDetail(id) {
 
 export function getTemperaments() {
 	return function (dispatch) {
-		return axios.get('http://localhost:3001/temperament')
+		return axios.get('/temperament')
 		.then((temperament) => {
 			dispatch({
 				type: 'GET_TEMPERAMENT',

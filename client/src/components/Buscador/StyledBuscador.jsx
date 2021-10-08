@@ -16,6 +16,10 @@ export const StyledBuscador = styled.div`
         color:black;
 
     }
+
+    form{
+        background-color: black;
+    }
     
     &::after{
         content: '\f002';
@@ -27,6 +31,6 @@ export const StyledBuscador = styled.div`
         font-size: 25px;
         color: yellow;
     }
-    
+   
         
 `
