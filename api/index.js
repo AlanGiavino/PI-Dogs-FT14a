@@ -6,7 +6,7 @@ const { Temperament, Breed } = require('./src/db.js');
 
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
 
   let tempsObj = {};
   axios.get(`https://api.thedogapi.com/v1/breeds`)
