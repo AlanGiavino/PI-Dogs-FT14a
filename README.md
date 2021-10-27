@@ -5,7 +5,6 @@
 </p>
 
 ## Objetivos del Proyecto
-
 - Construir una App utlizando React, Redux, Node y Sequelize.
 - Afirmar y conectar los conceptos aprendidos en la carrera.
 - Aprender mejores prácticas.
@@ -18,6 +17,9 @@
 - [ ] Redux
 - [ ] Express
 - [ ] Sequelize - Postgres
+
+## Para observar el Proyecto
+- 🌐 Link: https://dogsapp.vercel.app/
 
 ## Imagenes del proyecto
 <br>
